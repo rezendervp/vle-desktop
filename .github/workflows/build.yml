@@ -24,7 +24,7 @@ jobs:
 
       - name: Gerar executável
         run: |
-          pyinstaller --onefile --windowed --collect-all customtkinter --name "VLE_Desktop" vle_desktop.py
+          pyinstaller --onefile --windowed --collect-all customtkinter --icon icone.ico --name "VLE_Desktop" vle_desktop.py
 
       - name: Publicar executável
         uses: actions/upload-artifact@v4
