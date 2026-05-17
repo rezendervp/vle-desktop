@@ -679,4 +679,9 @@ class VLEApp(ctk.CTk):
 
 if __name__ == "__main__":
     app = VLEApp()
+    def on_closing():
+        plt.close("all")
+        app.destroy()
+        sys.exit(0)
+    app.protocol("WM_DELETE_WINDOW", on_closing)
     app.mainloop()
