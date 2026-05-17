@@ -253,6 +253,10 @@ class VLEApp(ctk.CTk):
         self.minsize(1100, 700)
         self.configure(fg_color="#0E1117")
 
+        ico_path = os.path.join(base_dir(), "icone.ico")
+        if os.path.exists(ico_path):
+            self.iconbitmap(ico_path)
+
         self.df_result = None
         self.df_raoult = None
         self._c1_label = "Benzeno"
